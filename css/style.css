@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blued: #3b82f6;
+    --light-grey: #e2e8f0;
+}
+
+.profile-img, .mini-profile-img {
+    border-radius: 50%;
+}
+
+.mini-profile-img {
+    height: 80px;
+    width: 80px;
+}
+
+.profile-img {
+    height: 100px;
+    width: 100px;
+}
+
+/* General Layout*/
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/*------------------- Sidebar -------------------*/
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blued);
+    color: white;
+}
+
+.dashboard,
+.options {
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+    align-items: center;
+}
+
+ul {
+    padding: 0px;
+    margin: 20px 0;
+}
+    /* Start Logo css */
+.logo {
+    display: grid;
+    height: 35px;
+    width: 35px;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 3.5px;
+}
+
+div.logo > div {
+    background: white;
+}
+
+.logo div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.logo div:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: -1 / 2;
+}
+    /* End Logo css */
+
+/*------------------- Header -------------------*/
+.header {
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.search-bar,
+.profile {
+    grid-column: 1 / 2;
+}
+
+.profile-options,
+.content-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.search-bar {
+    margin: 0 40px;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.profile-img {
+    grid-row: 1 / 3;
+    justify-self: end;
+}
+
+.profile-message {
+    align-self: end;
+}
+
+.profile-name {
+    align-self: start;
+}
+
+.content-options {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*------------------- Main Content -------------------*/
+.main-content {
+    background-color: var(--light-grey);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    gap: 30px;
+}
+
+.projects h3 {
+    grid-column: 1 / -1;
+}
+
+.project-card {
+    height: 200px;
+    background: white;
+    border-radius: 2.5%;
+}
+
+.announcements, .trending {
+    grid-column: 2 / 4;
+}
+
+.announcements-card, .trending-card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2.5%;
+}
