@@ -16,7 +16,7 @@
 
 /* Font size and color */
 h2 {
-    font-size: 30px;
+    font-size: calc(20px + 0.8vw);
 }
 
 
@@ -140,12 +140,12 @@ input[type=search] {
 
 
     /* Start Profile options */
-.profile-options img {
-    justify-self: end;
+.profile-options {
+    gap: 1.5rem;
 }
 
-.profile-options div {
-    margin-left: 1rem;
+.profile-options img {
+    justify-self: end;
 }
     /* End Profile options */
 
@@ -155,6 +155,7 @@ input[type=button] {
     border: none;
     background: var(--blued);
     width: 80%;
+    min-width: 70px;
     height: 40px;
     color: white;
     font-weight: bold;
